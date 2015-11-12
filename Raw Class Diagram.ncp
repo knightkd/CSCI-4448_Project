@@ -39,18 +39,18 @@
         <Size width="162" height="112" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public string Focus</Member>
-        <Member type="Method">public void Edit()</Member>
+        <Member type="Method">public void EditProgram()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Partner</Name>
         <Access>Public</Access>
-        <Location left="452" top="604" />
+        <Location left="452" top="608" />
         <Size width="162" height="128" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public string category</Member>
         <Member type="Field">public string section</Member>
-        <Member type="Method">public void Edit()</Member>
+        <Member type="Method">public void EditPartner()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
@@ -80,6 +80,8 @@
     </Entities>
     <Relationships>
       <Relationship type="Association" first="1" second="0">
+        <Label>
+        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">

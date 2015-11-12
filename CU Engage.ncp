@@ -40,20 +40,23 @@
         <Size width="162" height="112" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public string Focus</Member>
+        <Member type="Method">public void EditFocus()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Partner</Name>
         <Access>Public</Access>
         <Location left="452" top="604" />
-        <Size width="162" height="126" />
+        <Size width="162" height="145" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public string category</Member>
         <Member type="Field">public string section</Member>
+        <Member type="Method">public void EditCategory()</Member>
+        <Member type="Method">public void EditSection()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
-        <Name>Affiliate</Name>
+        <Name>AffiliateList</Name>
         <Access>Public</Access>
         <Location left="987" top="608" />
         <Size width="162" height="147" />
@@ -67,18 +70,20 @@
       <Entity type="Comment">
         <Text>CU Engage Organizations
 (e.g. INVST, Leadership Studies Minor, etc.)</Text>
-        <Location left="696" top="780" />
+        <Location left="707" top="796" />
         <Size width="195" height="62" />
       </Entity>
       <Entity type="Comment">
         <Text>Community Partners
 (e.g. Boulder Community Health, Women's Resource Center, City of Boulder, etc.)</Text>
-        <Location left="440" top="780" />
+        <Location left="441" top="796" />
         <Size width="188" height="75" />
       </Entity>
     </Entities>
     <Relationships>
       <Relationship type="Association" first="1" second="0">
+        <Label>
+        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
@@ -122,6 +127,10 @@
       <Relationship type="Comment" first="6" second="3">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>532</X>
+          <Y>771</Y>
+        </BendPoint>
       </Relationship>
       <Relationship type="Comment" first="5" second="2">
         <StartOrientation>Vertical</StartOrientation>

@@ -8,7 +8,7 @@
         <Name>Organization</Name>
         <Access>Public</Access>
         <Location left="683" top="199" />
-        <Size width="213" height="298" />
+        <Size width="213" height="281" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public string organizationName</Member>
         <Member type="Field">public string contactName</Member>
@@ -20,7 +20,6 @@
         <Member type="Method">public void Add()</Member>
         <Member type="Method">public void Remove()</Member>
         <Member type="Method">public void Find()</Member>
-        <Member type="Method">public void Edit()</Member>
         <Member type="Method">public void DisplayInfo()</Member>
         <Member type="Method">public list&lt;Organizations&gt; GetAffiliates()</Member>
         <Modifier>None</Modifier>
@@ -40,19 +39,18 @@
         <Size width="162" height="112" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public string Focus</Member>
-        <Member type="Method">public void EditFocus()</Member>
+        <Member type="Method">public void Edit()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Partner</Name>
         <Access>Public</Access>
         <Location left="452" top="604" />
-        <Size width="162" height="145" />
+        <Size width="162" height="128" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public string category</Member>
         <Member type="Field">public string section</Member>
-        <Member type="Method">public void EditCategory()</Member>
-        <Member type="Method">public void EditSection()</Member>
+        <Member type="Method">public void Edit()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
@@ -82,8 +80,6 @@
     </Entities>
     <Relationships>
       <Relationship type="Association" first="1" second="0">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">

@@ -1,0 +1,141 @@
+<Project>
+  <Name>CU Engage</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Class Diagram</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Organization</Name>
+        <Access>Public</Access>
+        <Location left="683" top="199" />
+        <Size width="213" height="298" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public string organizationName</Member>
+        <Member type="Field">public string contactName</Member>
+        <Member type="Field">public string contacatPhone</Member>
+        <Member type="Field">public string contactEmail</Member>
+        <Member type="Field">public string website</Member>
+        <Member type="Field">public string description</Member>
+        <Member type="Field">public list&lt;Organizations&gt; affiliates</Member>
+        <Member type="Method">public void Add()</Member>
+        <Member type="Method">public void Remove()</Member>
+        <Member type="Method">public void Find()</Member>
+        <Member type="Method">public void Edit()</Member>
+        <Member type="Method">public void DisplayInfo()</Member>
+        <Member type="Method">public list&lt;Organizations&gt; GetAffiliates()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Client</Name>
+        <Access>Public</Access>
+        <Location left="353" top="199" />
+        <Size width="162" height="80" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Program</Name>
+        <Access>Public</Access>
+        <Location left="707" top="604" />
+        <Size width="162" height="112" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public string Focus</Member>
+        <Member type="Method">public void EditFocus()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Partner</Name>
+        <Access>Public</Access>
+        <Location left="452" top="604" />
+        <Size width="162" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public string category</Member>
+        <Member type="Field">public string section</Member>
+        <Member type="Method">public void EditCategory()</Member>
+        <Member type="Method">public void EditSection()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AffiliateList</Name>
+        <Access>Public</Access>
+        <Location left="987" top="608" />
+        <Size width="162" height="147" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private Affiliate Children</Member>
+        <Member type="Method">public void AddAffiliate()</Member>
+        <Member type="Method">public void RemoveAffiliate()</Member>
+        <Member type="Method">public void GetAffiliate()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Comment">
+        <Text>CU Engage Organizations
+(e.g. INVST, Leadership Studies Minor, etc.)</Text>
+        <Location left="707" top="796" />
+        <Size width="195" height="62" />
+      </Entity>
+      <Entity type="Comment">
+        <Text>Community Partners
+(e.g. Boulder Community Health, Women's Resource Center, City of Boulder, etc.)</Text>
+        <Location left="441" top="796" />
+        <Size width="188" height="75" />
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="1" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>540</X>
+          <Y>222</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Generalization" first="3" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="2" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="4" second="0">
+        <Label>Contains</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1228</X>
+          <Y>690</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>938</X>
+          <Y>221</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+        <StartRole>Parent</StartRole>
+        <EndRole>Child</EndRole>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Generalization" first="4" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Comment" first="6" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>532</X>
+          <Y>771</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Comment" first="5" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

@@ -7,8 +7,8 @@
       <Entity type="Class">
         <Name>Organization</Name>
         <Access>Public</Access>
-        <Location left="683" top="199" />
-        <Size width="213" height="281" />
+        <Location left="1192" top="775" />
+        <Size width="262" height="281" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public string organizationName</Member>
         <Member type="Field">public string contactName</Member>
@@ -16,18 +16,17 @@
         <Member type="Field">public string contactEmail</Member>
         <Member type="Field">public string website</Member>
         <Member type="Field">public string description</Member>
-        <Member type="Field">public list&lt;Organizations&gt; affiliates</Member>
+        <Member type="Field">public string type</Member>
+        <Member type="Field">public string category</Member>
         <Member type="Method">public void Add()</Member>
-        <Member type="Method">public void Remove()</Member>
-        <Member type="Method">public void Find()</Member>
-        <Member type="Method">public void DisplayInfo()</Member>
-        <Member type="Method">public list&lt;Organizations&gt; GetAffiliates()</Member>
+        <Member type="Method">public void Remove(ref string Organization)</Member>
+        <Member type="Method">public void Edit(ref string Organization)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Client</Name>
         <Access>Public</Access>
-        <Location left="353" top="199" />
+        <Location left="901" top="261" />
         <Size width="162" height="80" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -35,7 +34,7 @@
       <Entity type="Class">
         <Name>Program</Name>
         <Access>Public</Access>
-        <Location left="707" top="604" />
+        <Location left="1241" top="1184" />
         <Size width="162" height="112" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public string Focus</Member>
@@ -45,7 +44,7 @@
       <Entity type="Class">
         <Name>Partner</Name>
         <Access>Public</Access>
-        <Location left="452" top="608" />
+        <Location left="977" top="1184" />
         <Size width="162" height="128" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public string category</Member>
@@ -56,7 +55,7 @@
       <Entity type="Class">
         <Name>AffiliateList</Name>
         <Access>Public</Access>
-        <Location left="987" top="608" />
+        <Location left="1496" top="1184" />
         <Size width="162" height="147" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private Affiliate Children</Member>
@@ -68,29 +67,51 @@
       <Entity type="Comment">
         <Text>CU Engage Organizations
 (e.g. INVST, Leadership Studies Minor, etc.)</Text>
-        <Location left="707" top="796" />
+        <Location left="1216" top="1372" />
         <Size width="195" height="62" />
       </Entity>
       <Entity type="Comment">
         <Text>Community Partners
 (e.g. Boulder Community Health, Women's Resource Center, City of Boulder, etc.)</Text>
-        <Location left="441" top="796" />
+        <Location left="965" top="1372" />
         <Size width="188" height="75" />
+      </Entity>
+      <Entity type="Interface">
+        <Name>Organization</Name>
+        <Access>Public</Access>
+        <Location left="1234" top="464" />
+        <Size width="162" height="112" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void Add()</Member>
+        <Member type="Method">void Remove()</Member>
+        <Member type="Method">void Edit()</Member>
+      </Entity>
+      <Entity type="Interface">
+        <Name>User</Name>
+        <Access>Public</Access>
+        <Location left="458" top="463" />
+        <Size width="162" height="112" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void Add()</Member>
+        <Member type="Method">void Remove()</Member>
+        <Member type="Method">void Edit()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>User</Name>
+        <Access>Public</Access>
+        <Location left="427" top="783" />
+        <Size width="221" height="180" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public string firstName</Member>
+        <Member type="Field">public string lastName</Member>
+        <Member type="Field">public string email</Member>
+        <Member type="Method">public void Add()</Member>
+        <Member type="Method">public void Remove(ref string User)</Member>
+        <Member type="Method">public void Edit(ref string User)</Member>
+        <Modifier>None</Modifier>
       </Entity>
     </Entities>
     <Relationships>
-      <Relationship type="Association" first="1" second="0">
-        <Label>
-        </Label>
-        <StartOrientation>Horizontal</StartOrientation>
-        <EndOrientation>Horizontal</EndOrientation>
-        <BendPoint relativeToStartShape="True">
-          <X>540</X>
-          <Y>222</Y>
-        </BendPoint>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
-      </Relationship>
       <Relationship type="Generalization" first="3" second="0">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
@@ -104,12 +125,12 @@
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>1228</X>
-          <Y>690</Y>
+          <X>1737</X>
+          <Y>1266</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
-          <X>938</X>
-          <Y>221</Y>
+          <X>1496</X>
+          <Y>797</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Aggregation</AssociationType>
@@ -126,13 +147,45 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>532</X>
-          <Y>771</Y>
+          <X>1056</X>
+          <Y>1347</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Comment" first="5" second="2">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="7" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="8">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="8" second="9">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
       </Relationship>
     </Relationships>
   </ProjectItem>

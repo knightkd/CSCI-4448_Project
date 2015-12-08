@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: organizations
+#
+#  id              :integer          not null, primary key
+#  name            :string
+#  website         :string
+#  description     :text
+#  type_id         :integer
+#  catagory_id     :integer
+#  partner_type_id :integer
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  website: 
+  description: MyText
+  type_id: 
+  catagory_id: 
+  partner_type_id: 
+
+two:
+  name: MyString
+  website: 
+  description: MyText
+  type_id: 
+  catagory_id: 
+  partner_type_id: 

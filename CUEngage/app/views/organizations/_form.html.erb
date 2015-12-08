@@ -1,0 +1,50 @@
+	<div class="container">
+	<%= form_for(@organization) do |f| %>
+	  <% if @organization.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
+
+	      <ul>
+	      <% @organization.errors.full_messages.each do |message| %>
+	        <li><%= message %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+	  <style type="text/css">
+	      .bs-example{
+	      	margin: 20px;
+	      }
+	  </style>
+
+
+		<div class="field">
+		    <%= f.label :name %><br>
+		    <%= f.text_field :name %>
+	  <div class="field">
+	    <%= f.label :website %><br>
+	    <%= f.text_field :website %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :description %><br>
+	    <%= f.text_area :description %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :type_id %><br>
+	    <%= f.select :type_id, collection_of(:organization_types) %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :catagory_id %><br>
+	    <%= f.select :catagory_id, collection_of(:organization_catagories) %>
+	 </div>
+	  <div class="field">
+	    <%= f.label :partner_type_id, "Program" %><br>
+	    <%= f.select :partner_type_id, collection_of(:partner_types) %>
+	</div> 
+
+	  <div class="actions">
+	    <%= f.submit %>
+	  </div>
+
+	<% end %>
+</div>

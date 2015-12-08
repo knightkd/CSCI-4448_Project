@@ -1,0 +1,21 @@
+User first_name:string last_name:string email:string role:references
+
+Role name:string description:text
+
+Organization name:string website:srting description:text type:references catagory:references partner_type:references
+
+PartnerType name:srting description:text
+
+OrganizationCatagory name:string description:text 
+
+OrganizationType name:string description:text
+
+ContactInformation phone:string first_name:string last_name:string email:string organization:references
+
+PartnerList organization:references
+
+  HABTM organizations 
+  
+organizations_partner_lists
+partner_list_id
+organization_id

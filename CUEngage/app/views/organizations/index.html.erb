@@ -1,0 +1,34 @@
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Organizations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Website</th>
+      <th>Type</th>
+      <th>Catagory</th>
+      <th>Partner type</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @organizations.each do |organization| %>
+      <tr>
+        <td><%= link_to organization.name, organization %></td>
+        <td><%= link_to "Go to Website",  "#{organization.website}", :target => "_blank" %></td>
+        <td><%= organization.type ? organization.type.name : "" %></td>
+        <td><%= organization.catagory.name %></td>
+        <td><%= organization.partner_type ? organization.partner_type.name : "" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Organization', new_organization_path %>
+

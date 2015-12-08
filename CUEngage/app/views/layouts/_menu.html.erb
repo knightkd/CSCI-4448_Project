@@ -1,0 +1,15 @@
+
+<%= nav_bar responsive: true do %>
+    <%= menu_group do %>
+        <%= menu_item "Home", root_path %>
+        <%= menu_divider %>
+		<%= menu_item "Organizations", organizations_path %>
+		<!-- <%= menu_item "Search", organizations_search_path %> -->
+        <%= menu_item "Users", users_path %>
+        <%= drop_down "Admin Functions" do %>
+            <%= menu_item "Organziation Catagories", organization_catagories_path %>
+            <%= menu_item "Partner Types", partner_types_path %>
+            <%= menu_item "Roles", roles_path %>
+        <% end %>
+    <% end %>
+<% end %>
